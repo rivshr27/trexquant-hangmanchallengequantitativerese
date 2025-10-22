@@ -229,7 +229,7 @@ In summary:
 The true accuracy limit for a real-world Hangman solver lies somewhere between the random and optimal bounds, and depends on the ability to generalize patterns from a training set to new unseen words. Further experiments on separate train/test splits would help establish a more realistic accuracy upper bound, left as future works.
 
 > [!IMPORTANT]
-> <span style="color:red; font-weight:bold;">Conclusion & Future Work</span>  
+## Conclussion and Future Work
 > <span style="color:red;">Local Accuracy: <b>65%</b></span>  
 > <span style="color:red;">API Accuracy: <b>54.8%</b></span>  
 > <span style="color:red;">Performance Gap: <b>~18%</b></span>  
