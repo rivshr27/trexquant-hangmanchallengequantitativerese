@@ -189,28 +189,15 @@ The specific method is as follows:
 
 ### Local Testing Results
 
-The table below summarizes the local performance of various models on the Hangman game:
+The image below summarizes the local performance of models on the Hangman game:
+![](images/local-suceesrate.png)
 
-| Model |  Score (local) | time (min)| note|
-|-------|--------------|--------|----|
-|baseline| 21.04 | 1:30 |  |
-|re.search| 38.16 | 3:00 | search all words |
-|first order| 38.04 | 1:33 | inspired by [this blog](http://www.datagenetics.com/blog/april12012/index.html) |
-|N-gram | 62.28 | 0:01 | inspired by [this repo](https://github.com/mattgalarneau/Hangman-NLP), with first order |
-|N-gram + 2/4 | 64.32 | 0:07 | with first order |
-|N-gram + 2/4 + 2/5  | 66.16 | 0:12 |with first order |
-|N-gram + 2/4 + 2/5 + 3/5 | 65.90 | 2:18 |with first order, slow so drop 3/5 |
-|GRU-4-1024 | 48.88 | 0:40 | train&test on single NVIDIA-3090 |
-|GRU + interval-1| 69.36 | 0:40 | `interval-1` means update $p$ per epoch |
-|LSTM | 67.36 | 0:40 | with interval-1 |
-|Transformer | 40.12 | 0:40 | with interval-1 |
-|***GRU + N-gram*** (Local)| ***73.06*** | 0:43 | bagging the GRU model with N-gram |
 
 ### API Performance Results
 
 When deployed through the API interface, the best model achieved:
 - **API Accuracy: 54.8%**
-- **Performance Drop: ~18% compared to local testing**
+![](images/API-suceess%20rate.png)
 
 ### Performance Analysis
 
@@ -321,16 +308,3 @@ source hangman_env/bin/activate
 # Verify setup
 python test_setup.py
 ```
-
-## References
-
-- codes:
-  - https://github.com/mattgalarneau/Hangman-NLP
-  - https://github.com/Jisheng-Liang/hangman_transformer
-  - https://github.com/methi1999/hangman?tab=readme-ov-file
-  - https://github.com/Azure/Hangman/blob/master/Train%20a%20Neural%20Network%20to%20Play%20Hangman.ipynb
-- others:
-  - https://stackoverflow.com/questions/9942861/optimal-algorithm-for-winning-hangman
-  - https://blog.wolfram.com/2010/08/13/25-best-hangman-words/
-  - http://www.datagenetics.com/blog/april12012/index.html
-  - https://blog.csdn.net/weixin_42327556/article/details/103285869
