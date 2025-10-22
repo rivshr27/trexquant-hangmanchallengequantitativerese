@@ -240,7 +240,7 @@ To reproduce the local results (65% accuracy), run the following commands:
 
 ```bash
 # Train the GRU model (requires model and plots folders, and PyTorch installation)
-python -m deeplearning.train 
+python train.py 
 
 # Test local hangman game with trained model
 jupyter notebook hangman_local.ipynb
