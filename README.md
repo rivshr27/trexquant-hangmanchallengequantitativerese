@@ -199,20 +199,6 @@ When deployed through the API interface, the best model achieved:
 - **API Accuracy: 54.8%**
 ![](images/API-suceess%20rate.png)
 
-### Performance Analysis
-
-**Local Performance (65-73% range):**
-- The baseline model achieves 21.04% by matching masked words to dictionary words of the same length
-- Relaxing search conditions (re.search) improves performance to 38.16%
-- N-gram models show significant improvements, with the best achieving 66.16%
-- Neural network models (GRU) capture long-range dependencies, reaching 69.36%
-- The combined GRU + N-gram model achieves the best local performance at 73.06%
-
-**API Performance (54.8%):**
-- Represents real-world deployment constraints
-- Performance reduction due to network latency, API limitations, and different test conditions
-- Still significantly better than baseline approaches
-- Demonstrates practical applicability despite reduced accuracy
 
 
 ### The Limitation of Accuracy
@@ -232,7 +218,7 @@ Next, I designed an "optimal" strategy that assumes access to the full test set 
 
 When testing on a corpus of 250,000 words, this optimal strategy achieved an accuracy of 96%. This suggests that if the test set is identical to the training data, the accuracy limit should be quite high. 
 
-However, it's important to note that if the test set and training set are two disjoint sets, the upper bound on accuracy would be significantly lower. I did not provide an analysis for this more realistic scenario where the model is evaluated on an unseen test set.
+
 
 In summary:
 - A random guessing strategy provides a lower bound on expected accuracy
@@ -242,35 +228,17 @@ In summary:
 
 The true accuracy limit for a real-world Hangman solver lies somewhere between the random and optimal bounds, and depends on the ability to generalize patterns from a training set to new unseen words. Further experiments on separate train/test splits would help establish a more realistic accuracy upper bound, left as future works.
 
+> [!IMPORTANT]
+> <span style="color:red; font-weight:bold;">Conclusion & Future Work</span>  
+> <span style="color:red;">Local Accuracy: <b>65%</b></span>  
+> <span style="color:red;">API Accuracy: <b>54.8%</b></span>  
+> <span style="color:red;">Performance Gap: <b>~18%</b></span>  
+> <span style="color:red;">Deployment Optimization: Reduce the local-to-API gap via compression, edge computing, or improved API design</span>  
+> <span style="color:red;">Domain Adaptation: Adapt models to perform robustly across varied test distributions</span>  
+> <span style="color:red;">Advanced Architectures: Leverage transformer-based models or larger corpora for higher accuracy</span>  
+> <span style="color:red;">Real-time Adaptation: Adjust model dynamically based on game performance feedback</span>  
+> <span style="color:red;">Ensemble Methods: Implement efficient ensembles suitable for API deployment</span>
 
-## Conclusion and Future Work
-
-### Key Achievements
-
-**Local Performance**: The combined GRU + N-gram model achieves 65-73% accuracy in controlled local testing environments, demonstrating the effectiveness of hybrid approaches that combine statistical language models with deep learning.
-
-**API Deployment**: Successfully deployed model achieves 54.8% accuracy via API, representing a practical implementation that significantly outperforms baseline approaches while operating under real-world constraints.
-
-**Technical Innovation**: The integration of n-gram statistical models with GRU neural networks proves that complementary approaches can achieve superior performance - n-grams provide letter frequency and co-occurrence statistics while GRUs model complex patterns and long-range dependencies.
-
-### Performance Summary
-
-- **Local Model**: 65% accuracy (up to 73% with optimal configuration)
-- **API Model**: 54.8% accuracy  
-- **Performance Gap**: ~18% reduction due to deployment constraints
-- **Baseline Improvement**: Both versions significantly outperform 21% baseline accuracy
-
-### Future Work Opportunities
-
-1. **Deployment Optimization**: Investigate methods to reduce the local-API performance gap through model compression, edge computing, or improved API architectures
-
-2. **Domain Adaptation**: Explore techniques to better adapt models trained on one word distribution to perform well on different test distributions
-
-3. **Advanced Architectures**: Incorporate more sophisticated language models such as transformer-based approaches or models trained on larger, more diverse corpora
-
-4. **Real-time Optimization**: Develop strategies for real-time model adaptation based on game performance feedback
-
-5. **Ensemble Methods**: Explore more sophisticated ensemble techniques that can be efficiently deployed via API while maintaining high accuracy
 
 
 ## Reproducibility
