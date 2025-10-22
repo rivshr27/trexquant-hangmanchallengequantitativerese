@@ -45,16 +45,7 @@ This report explores various strategies for solving the Hangman game, including 
 
 Hangman is a classic word-guessing game that challenges players to deduce a hidden word by guessing one letter at a time. The game begins with the presentation of a series of blanks, each representing a letter of the secret word. Players take turns guessing letters they believe might be in the word. If a guessed letter is correct, it is revealed in its correct positions within the word. If the letter is not in the word, a part of a 'hangman' stick figure is drawn. The objective is to guess the word before the drawing of the hangman is completed, typically 6 incorrect guesses (head, body, 2 arms, 2 legs).
 
-```
-* [Game: ] start with a word: _ _ _ _ _
-* [Player: ] guess a letter: a
-* [Game: ] bingo! now: _ a _ _ _
-* [Player: ] guess a letter: e
-* [Game: ] sorry, no e in the word: _ a _ _ _
-* [Player: ] guess a letter: l
-* [Game: ] bingo! now: _ a l l _
-* ...... until the word is guessed or the hangman is dead
-```
+Read this [link](https://en.wikipedia.org/wiki/Hangman_(game)) for more details.
 
 ## Preliminary Work
 
