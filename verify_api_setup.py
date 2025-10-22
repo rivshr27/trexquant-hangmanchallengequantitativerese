@@ -50,7 +50,7 @@ def test_imports():
         return False
     
     try:
-        from deeplearning.train import dl_model
+        from train import dl_model
     except ImportError as e:
         return False
     
@@ -75,7 +75,7 @@ def test_model_loading():
     """Test if models can be loaded"""
     try:
         import utils
-        from deeplearning.train import dl_model
+        from train import dl_model
         
         # Test n-gram loading
         n_grams = utils.build_n_gram_from_file("words_250000_train.txt")

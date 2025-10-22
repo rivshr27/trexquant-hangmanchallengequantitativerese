@@ -10,6 +10,8 @@ venv/
 *.pth
 *.pt
 *.h5
+pickle/*.pkl
+
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
