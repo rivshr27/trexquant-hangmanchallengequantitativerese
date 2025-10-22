@@ -1,6 +1,6 @@
 # Hangman Game Assignment TrexQuant
 
-## IMPORTANT: Model Performance Summary
+## [!IMPORTANT]: Model Performance Summary
 
 **Local Model Accuracy: 65%**  
 **API Version Accuracy: 54.8%**
