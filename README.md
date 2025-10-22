@@ -1,11 +1,12 @@
 # Hangman Game Assignment TrexQuant
 
-## [!IMPORTANT]: Model Performance Summary
+[!IMPORTANT]:
+> **Model Performance Summary:-**
+> **API Version:- The overall success rate of 1000 online test words is 54.8%**
+>. **Locally Deployed Model Accuracy: 65%**  
 
-**Local Model Accuracy: 65%**  
-**API Version Accuracy: 54.8%**
 
-The local version achieves higher accuracy due to controlled testing conditions and optimized model parameters. The API version shows reduced performance due to network constraints, different word distributions, and API response limitations.
+The local version achieves higher accuracy due to controlled testing conditions and optimized model parameters. The API version shows reduced performance due to network constraints and API response limitations.
 
 ## Performance Difference: Local vs API Version
 
