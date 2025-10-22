@@ -1,7 +1,6 @@
 # Hangman Game Assignment TrexQuant
 
-<span style="color:red; font-weight:bold;">[!IMPORTANT]:</span>  
-<br>
+> [!Important]
 
 **Model Performance Summary:-**  
 **API Version:** The overall success rate of 1000 online test words is **54.8%**  
