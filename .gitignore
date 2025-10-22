@@ -18,3 +18,4 @@ pickle/*.pkl
 
 # OS files
 .DS_Store
+pickle/*.pkl
